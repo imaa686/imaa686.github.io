@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background-color: #fff;
+    color:#000;
+    font-family: 'Anybody', cursive;
+}
+
+header {
+    /* min-height: 300px; */
+    background-color: rgba(158, 20, 20, 0.904);
+    text-align: center;
+    padding:60px;
+    
+}
+header h1{
+    font-size: 2.5em;
+    color: #ffff;
+}
+nav {
+    /* height: 50px; */
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color:#fff;
+    padding:15px 20px;
+    display:inline-block;
+    /* background-color: red; */
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+main article{
+    /* background-color: red; */
+    padding:20px 0;
+    overflow: hidden;
+    
+}
+main article h2{
+    width:40%;
+    min-width: 400px;
+    background-color: rgba(158, 20, 20, 0.904);
+    padding:20px;
+    
+}
+main article .contenido{
+    padding:30px;
+    /* background-color: aqua; */
+}
+main article img{
+    
+    width: 40%;
+    min-width: 100px;
+    max-width: 200px;
+    margin-right: 20px;;
+    float:left;
+}
+main article p{
+    margin-top:20px;
+    /* margin-left:20px; */
+    line-height: 25px;
+}
+main .info{
+    background-color: rgb(138, 9, 9);
+    text-align: center;
+    font-weight: bolder;
+    
+}
+main .info p{
+    padding:40px 20% 0;
+    line-height: 20px;;
+}
+
+main .info img{
+    width: 20%;
+    max-width: 200px;
+    /* border:5px solid #fff; */
+    margin-bottom: -20px;
+}
+footer{
+    /* height: 50px; */
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+    padding:15px;
+}
+.imagen-grande {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.imagen-grande img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+:root {
+    --amarillo: #ffd600;
+    --oscuro: #2b2b2b;
+    --fondo: #fffbe6;
+    --verde: #2e9e44;
+    --rojo: #d9432f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--fondo);
+    color: var(--oscuro);
+    line-height: 1.6;
+}
+
+/* Cabecera */
+header {
+    background: linear-gradient(135deg, #ffd600, #ffb300);
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px 0 5px;
+}
+
+header h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Menú */
+nav {
+    background-color: var(--oscuro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 25px;
+    padding: 14px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: var(--amarillo);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 4px 2px;
+    border-bottom: 2px solid transparent;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: #fff;
+    border-bottom-color: var(--amarillo);
+}
+
+/* Contenido principal en cuadrícula */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas */
+article {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid var(--amarillo);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+article.beneficio { border-top-color: var(--verde); }
+article.perjuicio { border-top-color: var(--rojo); }
+
+article h2 {
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 20px;
+}
+
+article h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--amarillo);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* Imágenes de las tarjetas (las vacías no se muestran) */
+.contenido img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+}
+
+.contenido img[src=""] {
+    display: none;
+}
+
+/* Listas con iconos */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+li::before {
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.beneficio li::before {
+    content: "✔";
+    color: var(--verde);
+}
+
+.perjuicio li::before {
+    content: "✖";
+    color: var(--rojo);
+}
+
+/* Bloque destacado final */
+.info {
+    grid-column: 1 / -1;
+    background: var(--oscuro);
+    color: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.info p {
+    max-width: 600px;
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.info img {
+    width: 90px;
+    height: 90px;
+    padding: 12px;
+    background: var(--amarillo);
+    border-radius: 50%;
+}
+
+/* Pie de página */
+footer {
+    background: var(--amarillo);
+    text-align: center;
+    padding: 25px 20px;
+}
+
+footer p {
+    margin: 0 0 8px;
+}
+
+footer h3 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    letter-spacing: 1px;
+}
